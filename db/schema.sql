@@ -4,4 +4,7 @@ DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 
 use  burgers_db;
-CREATE TABLE burgers(id int  auto_increment, burgers_name VARCHAR(30),devoured BOOLEAN )
+CREATE TABLE burgers(id int  auto_increment NOT NULL,
+    burgers_name VARCHAR(30),
+    devoured BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY(id));
